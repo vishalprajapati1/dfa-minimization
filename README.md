@@ -1,5 +1,6 @@
 # DFA Minimizer
 > This program is compatible with C++11.
+
 This program takes: 
 > State are represented by unsigned integers in this program and it can't be changed. Starting state is `0`.
 
