@@ -10,7 +10,7 @@ Alphabet seperated by commas `,`.
 Example: `a,b`
 
 3. Accepting state - `unsigned integer`.
-> DFA by definition may have multiple accepting state. Support for same will be included later.
+> DFA by definition may have multiple accepting state. But it is not supported.
 
 4. Transition - `unsigned integer`.
 
