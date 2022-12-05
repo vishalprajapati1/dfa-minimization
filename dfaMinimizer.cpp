@@ -94,7 +94,7 @@ std::unordered_map<size_t, size_t> stateToEquivalenceMap(
 std::string equivalenceToString(const std::unordered_set<size_t>& equivalence) {
   std::string s = "{";
   for (auto state : equivalence) s += "q" + std::to_string(state) + ",";
-  s[s.size() - 1] = '}';
+  s.back() = '}';
   return s;
 }
 
@@ -123,7 +123,7 @@ void printDfaFromEquivalentSet(
 
 std::unordered_set<size_t> reachableNonFinalStates(const dfaGraph& dfa) {
   std::unordered_set<size_t> reachableNonFinalStates{};
-  std::vector<bool> reachableLookUpTable(dfa.countOfStates(), false);  // vector of bool has different behaviour
+  std::vector<bool> reachableLookUpTable(dfa.countOfStates(), false);
   std::queue<size_t> Queue;
   Queue.push(dfa.initialState);
   while (!Queue.empty()) {
